@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
@@ -20,13 +21,9 @@ public class Main {
 //    }
 //
 
-    public static int f(int x, int y) {
-        return 3;
-    }
 
-    public static String f(int d, int e) {
-        return "be";
-    }
+
+
 
     public static String f(char d, int x) {
         return "cc";
@@ -37,6 +34,22 @@ public class Main {
     }
 
 
+    /*
+    1, 2, 3, 4, 5, 6
+    1, 1, 2, 3, 5, 8, ......
+     */
+
+    public static int fib(int n) {
+        int[] f= new int[n + 1];
+        f[0] = 1;
+        f[1] = 1;
+        for (int i = 2; i >= 2 && i <= n; i++) {
+            f[i] = f[i - 1] + f[i - 2];
+        }
+        return f[n];
+    }
+    c2039864@newcastle.ac.uk
+
     // ssss
     public static void main(String[] args) {
         /*
@@ -46,12 +59,8 @@ System.out.println(days[i]);
 
          */
 
-        int a = 3;
 
-
-
-        String s = f(2, 1);
-        System.out.println(s);
+        System.out.println(fib());
 
     }
 }
