@@ -2,6 +2,7 @@ import jdk.jshell.spi.ExecutionControl;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class OODemo {
 
@@ -42,13 +43,9 @@ public class OODemo {
 
     // return max elements in the list
     // [1, 3, 4, 5, 6]
-    public static int findMax(List<Integer> l) {
-       return -1;
-    }
-
-    public static int findMax2(List<Integer> l) {
-        return -1;
-    }
+//    public static int findMax(List<Integer> l) {
+//       return -1;
+//    }
 
     // n = 3, x = "ab" ----> ["ab", "ab", "ab"]
     // -----2, 3, 4-------> "a b
@@ -84,10 +81,34 @@ public class OODemo {
 //        int y = 11;
 //        boolean z = calculate(10, 11);
 //        System.out.println(t);
-        List<Integer> l = shuffle(new ArrayList<>(List.of(1, 3, 5, 6, 7, 10, 12, 132, 44, 55)));
-        System.out.println(l);
+        System.out.println(findMax(List.of(100, 3, 8, 5, 6)));
     }
 
 
-}
+    // [100, 3, 8, 5, 6]
+    public static int findMax(List<Integer> l) {
+        int Maxvalue = l.get(0);
+        for (int i = 1; i < l.size(); i++) {
+            int Next = l.get(i);
+            if (Maxvalue < Next) {
+                Maxvalue = Next;
+            }
 
+        }
+        return Maxvalue;
+    }
+
+    public static int findMax2(List<Integer> l) {
+        return -1;
+        l.remove()
+
+    }
+
+    // ["a", "bb", "cc"] --> {"a": 1, "bb": 2, "cc": 3}
+    public static Map<String, Integer> indexMap(List<String> l)  {
+        
+        return null;
+
+    }
+
+}
