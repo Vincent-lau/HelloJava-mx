@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
 import java.util.stream.Collectors;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
@@ -30,12 +29,11 @@ public class Main {
     */
 
 
-
     public static int fib_rec(int n) {
         if (n == 1 || n == 2)
             return 1;
         else
-            return fib_rec(n-1) + fib_rec(n-2);
+            return fib_rec(n - 1) + fib_rec(n - 2);
 
     }
 
@@ -48,17 +46,17 @@ public class Main {
                     p(1) * 2 <- 1 * 2
                     p(0)
          */
-       if (n > 0)
-           return powerOf2(n -1 ) * 2;
-       else
-          return 1;
+        if (n > 0)
+            return powerOf2(n - 1) * 2;
+        else
+            return 1;
 
     }
 
     public static int f(int n) {
         if (n > 3)
             return 3;
-        return f(n+1) + 1;
+        return f(n + 1) + 1;
     }
 
     // main -> f(1) -> f(2) -> f(3) -> f(4)
@@ -88,7 +86,7 @@ public class Main {
      */
 
     public static int fib(int n) {
-        int[] f= new int[n + 1];
+        int[] f = new int[n + 1];
         f[0] = 1;
         f[1] = 1;
         for (int i = 2; i >= 2 && i <= n; i++) {
@@ -101,25 +99,19 @@ public class Main {
 
     // ssss
     public static void main(String[] args) {
+        Circle c1 = new Circle(2.6);
+        System.out.println(c.area());
 
-        /*
-for(int i = 0; i < 10; i++) {
-System.out.println(days[i]);
-}
-
-         */
-
-
-        System.out.println(fib(100));
-
-        // 1       1          2        3
-        /* fst     sec        next
-                    fir        sec
-
-
-         */
     }
 
+    // ["a", "bb", "cc"] --> {"a": 1, "bb": 2, "cc": 3}
+    public static Map<String, Integer> indexMap(List<String> l) {
+        Map<String, Integer> Map1 = new TreeMap<>();
+        for (int i = 0; i < l.size(); i++) {
+            Map1.put(l.get(i), i + 1);
+        }
+        return Map1;
+    }
 }
 
 

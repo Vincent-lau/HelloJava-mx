@@ -100,7 +100,7 @@ public class OODemo {
 
     public static int findMax2(List<Integer> l) {
         return -1;
-        l.remove()
+//        l.remove()
 
     }
 
